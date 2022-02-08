@@ -4,16 +4,27 @@ import "./App.css";
 import Footer from "./Components/Footer";
 import Spells from "./Components/Spells";
 import Header from "./Components/Header";
+import User from "./Components/User";
+import Home from "./Components/Home";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link,
+  useParams,
+} from "react-router-dom";
 
 export function App() {
   return (
     <div className="App">
-      <style>
-        @import
-        url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fredericka+the+Great&display=swap');
-      </style>
-      <Header />
-      <Spells />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<User />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/spells" element={<Spells />} />
+        </Routes>
+      </Router>
       <Footer />
     </div>
   );

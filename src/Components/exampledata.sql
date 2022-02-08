@@ -11,8 +11,8 @@ CREATE TABLE "User" (
 CREATE TABLE "Spell" (
   "Id" SERIAL PRIMARY KEY,
   "Name" TEXT,
+  "Wand Movement" TEXT,
   "Description" TEXT,
-  "Action" TEXT,
   "Completed" BOOL
   
 );
