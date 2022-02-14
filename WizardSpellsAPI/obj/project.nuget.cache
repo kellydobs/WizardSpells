@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "rHlMLW5ejem7OV5D7O7LoyHQh/QfM1WqypfThe47N6kIMVeN4OhkyZEeUb4fLVG2/cE7B6mUFoPD3n0QypnqRw==",
+  "success": true,
+  "projectFilePath": "/Users/kellydobson/Desktop/sdg/WizardSpells/WizardSpellsAPI/WizardSpellsAPI.csproj",
+  "expectedPackageFiles": [
+    "/Users/kellydobson/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/kellydobson/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/kellydobson/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/kellydobson/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/kellydobson/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/kellydobson/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
