@@ -1,26 +1,41 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using WizardSpellsAPI.Models;
+using WizardSpellsAPI.Utils;
+
+
 
 namespace WizardSpellsAPI
 {
+
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
-        }
+            var host = Utilities.CreateWebHostBuilder(args).Build();
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+            using (var scope = host.Services.CreateScope())
+            {
+                var context = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
+                var canContinue = await Utilities.WaitForMigrations(host, context);
+
+                if (!canContinue)
                 {
-                    webBuilder.UseStartup<Startup>();
-                });
+                    return;
+                }
+            }
+
+            var task = host.RunAsync();
+
+            Utilities.Notify("WizardSpellAPI Running!");
+
+            WebHostExtensions.WaitForShutdown(host);
+        }
     }
 }
+
+

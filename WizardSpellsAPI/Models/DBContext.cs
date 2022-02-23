@@ -1,16 +1,18 @@
 using Microsoft.EntityFrameworkCore;
+using WizardSpellsAPI;
+
 
 namespace WizardSpellsAPI.Models
 {
-    public partial class DatabaseContext : DatabaseContext
+    public partial class DatabaseContext : DbContext
     {
-        public DbSet<WizardSpell> WizardSpells
+        public DbSet<Spell> WizardSpells
         {
             get; set;
         }
-        protected override voic OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpsql("server=localhost; database=WizardSpells");
+            optionsBuilder.UseNpgsql("server=localhost; database=WizardSpells");
         }
     }
 }

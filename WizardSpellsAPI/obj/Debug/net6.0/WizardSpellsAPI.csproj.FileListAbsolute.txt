@@ -1,0 +1,9 @@
+/Users/kellydobson/Desktop/sdg/WizardSpells/WizardSpellsAPI/obj/Debug/net6.0/WizardSpellsAPI.csproj.AssemblyReference.cache
+/Users/kellydobson/Desktop/sdg/WizardSpells/WizardSpellsAPI/obj/Debug/net6.0/WizardSpellsAPI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kellydobson/Desktop/sdg/WizardSpells/WizardSpellsAPI/obj/Debug/net6.0/WizardSpellsAPI.AssemblyInfoInputs.cache
+/Users/kellydobson/Desktop/sdg/WizardSpells/WizardSpellsAPI/obj/Debug/net6.0/WizardSpellsAPI.AssemblyInfo.cs
+/Users/kellydobson/Desktop/sdg/WizardSpells/WizardSpellsAPI/obj/Debug/net6.0/WizardSpellsAPI.csproj.CoreCompileInputs.cache
+/Users/kellydobson/Desktop/sdg/WizardSpells/WizardSpellsAPI/obj/Debug/net6.0/WizardSpellsAPI.MvcApplicationPartsAssemblyInfo.cs
+/Users/kellydobson/Desktop/sdg/WizardSpells/WizardSpellsAPI/obj/Debug/net6.0/WizardSpellsAPI.MvcApplicationPartsAssemblyInfo.cache
+/Users/kellydobson/Desktop/sdg/WizardSpells/WizardSpellsAPI/obj/Debug/net6.0/WizardSpellsAPI.RazorAssemblyInfo.cache
+/Users/kellydobson/Desktop/sdg/WizardSpells/WizardSpellsAPI/obj/Debug/net6.0/WizardSpellsAPI.RazorAssemblyInfo.cs
