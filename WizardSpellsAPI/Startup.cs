@@ -1,8 +1,7 @@
 using System;
-
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -55,7 +54,7 @@ namespace WizardSpellsAPI
             app.UseCors(builder => builder
             .AllowAnyHeader()
             .AllowAnyMethod()
-            .AllowAnyOriginal()
+            .AllowAnyOrigin()
             );
 
 

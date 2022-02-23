@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using WizardSpellsAPI.Models;
 using WizardSpellsAPI.Utils;
+using Microsoft.Extensions.DependencyInjection;
 
 
 
