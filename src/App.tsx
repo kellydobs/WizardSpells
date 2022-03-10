@@ -2,10 +2,11 @@ import { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Footer from "./Components/Footer";
-import Spells from "./Components/Spells";
+import Spell from "./Components/Spell";
 import Header from "./Components/Header";
 import User from "./Components/User";
 import Home from "./Components/Home";
+import Login from "./Components/Login";
 import {
   BrowserRouter as Router,
   Route,
@@ -20,9 +21,9 @@ export function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<User />} />
+          <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/spells" element={<Spells />} />
+          <Route path="/spell" element={<Spell />} />
         </Routes>
       </Router>
       <Footer />

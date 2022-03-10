@@ -4,7 +4,6 @@ export default function Header() {
   return (
     <header className="App-header">
       <h1>Welcome to Hogsmeade</h1>
-      <h2>User Name and Icon here</h2>
     </header>
   );
 }

@@ -3,15 +3,15 @@
 import React, { useState } from "react";
 // import Spell from "./Spell";
 
-function Spells() {
+function Spell() {
   // const [selectedSpell, setSelectedSpell] = useState({});
 
-  // const handleSpellSelection = (spell: {}) => {
+  // const handleSpellelection = (spell: {}) => {
   //   setSelectedSpell(spell);
   // };
 
   return (
-    <div className="Spells">
+    <div className="Spell">
       <h1>Incendio</h1>
       <h2>Wand Movement</h2>
       <img src="./src/Images/Incendio.webp" width="250px" height="200px"></img>
@@ -27,7 +27,7 @@ function Spells() {
   );
 }
 
-export default Spells;
+export default Spell;
 
-// from the list of spells, each spell will have an onClick event
-// you'll pass in the spell on the onclick onClick={((event) => handleSpellSelection(event))}
+// from the list of spell, each spell will have an onClick event
+// you'll pass in the spell on the onclick onClick={((event) => handleSpellelection(event))}

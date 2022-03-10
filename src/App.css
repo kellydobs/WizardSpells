@@ -8,6 +8,8 @@ Header {
   background-color: #f19953;
   color: #f3f7f0;
   top: 0%;
+  margin-top: -50px;
+  width: 100%;
 }
 
 header > h1 {
@@ -37,4 +39,11 @@ header > h2 {
   height: 0.5rem;
   background-color: #f3f7f0;
   color: #19323c;
+}
+
+.User {
+  text-align: center;
+  background-color: #f3f7f0;
+  font-size: 4rem;
+  padding-top: 0;
 }
