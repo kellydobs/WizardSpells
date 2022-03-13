@@ -1,11 +1,12 @@
 
 CREATE TABLE "User" (
   "Id" SERIAL PRIMARY KEY,
-  "Name" TEXT,
+  "UserName" TEXT,
   "Password" TEXT,
   "Avatar" IMAGE,
 );
-
+-- username is email address
+-- INSERT INTO "Users" ("UserName", "Password", "Avatar") VALUES ('EleanorM@wizardmail.com','LemonDrop','Hufflepuff');
 
 
 CREATE TABLE "Spell" (
@@ -17,12 +18,16 @@ CREATE TABLE "Spell" (
   
 );
 
+-- INSERT INTO "WizardSpells" ("Name", "Action", "Description" ) VALUES ('Wingardium Leviosa', 'The Quidditch balls will levitate.', 'To make a target levitate.');
+
+
 
 CREATE TABLE "Comments" (
+ "ID"				SERIAL Primary Key,
+ "UserName" 		TEXT NOT NULL,
+ "Comment"			TEXT NOT NULL,
+ "Spell"			TEXT NOT NULL,
+ "Time"				TIMESTAMP
+ ); 
   
-  "UserName" TEXT,
-  "Comment" TEXT,
-  "Spell", TEXT,
-  "Time", TIMESTAMP
-);
-/* what is primary id here?
+  -- INSERT INTO "Comments" ("UserName", "Comment", "Spell", "Date") VALUES ('KellyD@wizardmail.com','Point down towards the sensor','Arresto Momentum', '2021-11-28');

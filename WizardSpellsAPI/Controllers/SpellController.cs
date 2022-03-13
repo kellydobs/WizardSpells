@@ -29,11 +29,11 @@ namespace WizardSpellsAPI.Controllers
 
 
         [Route("/spells/{id}")]
-        public class WizardSpellController : ControllerBase
+        public class SpellSelectionController : ControllerBase
         {
             private readonly DatabaseContext _context;
 
-            public WizardSpellController(DatabaseContext context)
+            public SpellSelectionController(DatabaseContext context)
             {
                 _context = context;
 

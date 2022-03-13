@@ -14,5 +14,16 @@ namespace WizardSpellsAPI.Models
         {
             optionsBuilder.UseNpgsql("server=localhost; database=WizardSpells");
         }
+
+
+        //Does this go inside these curly brackets?
+        public DbSet<Comment> WizardSpells
+        {
+            get; set;
+        }
+        protected override void OnConfiguring(DatabaseContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseNpgsql("server=localhost; database=WizardSpells");
+        }
     }
 }
