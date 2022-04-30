@@ -1,13 +1,13 @@
+using System;
 
-
-public class Comment
+public class UserComment
 {
-    public int Id { get; set; }
-    public string UserName { get; set; }
+    public int ID { get; set; }
     public string Comment { get; set; }
     public string Spell { get; set; }
-    public string Date { get; set; }
-
+    public DateTime Time { get; set; }
+    public int UserId { get; set; }
+    public int SpellId { get; set; }
 
 }
 

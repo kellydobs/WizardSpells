@@ -7,7 +7,7 @@ public class Spell
     public string Action { get; set; }
     public string Description { get; set; }
 
-    // public string Difficulty { get; set; }
+
 }
 
 

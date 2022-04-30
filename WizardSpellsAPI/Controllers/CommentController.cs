@@ -23,9 +23,50 @@ namespace WizardSpellsAPI.Controllers
         }
         [HttpGet("all", Name = "GetAllComments")]
 
-        public async Task<ActionResult<List<Comment>>> GetAllSComments()
+        public async Task<ActionResult<List<UserComment>>> GetAllComments()
         {
             return await _context.Comments.ToListAsync();
         }
+
+        [HttpPost("create")]
+        public async Task<ActionResult<UserComment>> CreateUserComment(UserComment c)
+        {
+
+            if (c.Comment.Length < 1) return BadRequest("Your comment needs words!");
+
+            c.Comment = c.Comment.Trim();
+
+            _context.Comments.Add(c);
+            await _context.SaveChangesAsync();
+
+            return Created("create", c);
+        }
+
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<UserComment>> GetCommentById(int id)
+        {
+            var comment = await _context.Comments.FindAsync(id);
+
+            if (comment == null) return NotFound();
+            return comment;
+        }
+
+
+        // [HttpDelete("{id}")]
+        // public async Task<ActionResult<UserComment>> DeleteUserComment(int id)
+        // {
+        //     var comment = await _context.Comments.FindAsync(id);
+        //     if (comment == null) return NotFound();
+
+        //     _context.Comments.Remove(comment);
+        //     await _context.SaveChangesAsync();
+        //     //     return Delete(comment);
+        //     // 
+        // }
+
     }
-} 
+}
+
+
+
