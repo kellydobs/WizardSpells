@@ -22,9 +22,26 @@ namespace WizardSpellsAPI.Controllers
         }
         [HttpGet("all", Name = "GetAllWizardSpell")]
 
-        public async Task<ActionResult<List<Spell>>> GetAllSpells()
+        public async Task<ActionResult<IEnumerable<Spell>>> GetAllSpells(string filter)
         {
-            return await _context.WizardSpells.ToListAsync();
+            //use the db context in _contest to request all spells, sort
+            //them by row id and return them as a JSON array.
+            if (filter == null)
+            {
+                return await _context.WizardSpells.
+                OrderBy(row => row.Id).
+                Include(spell => spell.Comments).
+                ToListAsync();
+            }
+            else
+            {
+                //return the filtered list of spells
+                return await _context.WizardSpells.
+                OrderBy(row => row.Id).
+                Where(Spell => Spell.Name.ToLower().Contains(filter.ToLower())).
+                Include(Spell => Spell.Comments).
+                ToListAsync();
+            }
         }
     }
 
@@ -43,7 +60,10 @@ namespace WizardSpellsAPI.Controllers
         public async Task<ActionResult<Spell>> GetSpell(int id)
 
         {
-            var spell = await _context.WizardSpells.FindAsync(id);
+            var spell = await _context.WizardSpells.
+            Where(spell => spell.Id == id).
+            Include(spell => spell.Comments).
+            FirstOrDefaultAsync();
 
             if (spell == null)
             {

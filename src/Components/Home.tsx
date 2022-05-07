@@ -16,7 +16,7 @@ function Home() {
   }, []);
 
   const goToSpell = (spell: {}) => {
-    axios.get(`api/spells/${spell.id}`).then((response) => {
+    axios.get(`api/spells/${spell.Id}`).then((response) => {
       if (response) {
         setRequestedSpell(response.data);
       }

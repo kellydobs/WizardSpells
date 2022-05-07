@@ -21,12 +21,12 @@ namespace WizardSpellsAPI.Controllers
             _context = context;
 
         }
-        [HttpGet("all", Name = "GetAllComments")]
+        // [HttpGet("all", Name = "GetAllComments")]
 
-        public async Task<ActionResult<List<UserComment>>> GetAllComments()
-        {
-            return await _context.Comments.ToListAsync();
-        }
+        // public async Task<ActionResult<IEnumerable<UserComment>>> GetAllComments()
+        // {
+        //     return await _context.Comments.OrderBy(row => row.Id).ToListAsync();
+        // }
 
         [HttpPost("create")]
         public async Task<ActionResult<UserComment>> CreateUserComment(UserComment c)
@@ -43,25 +43,29 @@ namespace WizardSpellsAPI.Controllers
         }
 
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<UserComment>> GetCommentById(int id)
-        {
-            var comment = await _context.Comments.FindAsync(id);
+        // [HttpGet("{id}")]
+        // public async Task<ActionResult<UserComment>> GetCommentById(int id)
+        // {
+        //     var comment = await _context.Comments.FindAsync(id);
 
-            if (comment == null) return NotFound();
-            return comment;
-        }
+        //     if (comment == null)
+        //     {
+        //         return NotFound();
+        //     }
+        //     return comment;
+        // }
 
 
         // [HttpDelete("{id}")]
         // public async Task<ActionResult<UserComment>> DeleteUserComment(int id)
         // {
         //     var comment = await _context.Comments.FindAsync(id);
-        //     if (comment == null) return NotFound();
+        //     //     if (comment == null) {
+        //         return NotFound();
+        // }
 
         //     _context.Comments.Remove(comment);
         //     await _context.SaveChangesAsync();
-        //     //     return Delete(comment);
         //     // 
         // }
 
