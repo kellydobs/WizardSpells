@@ -6,7 +6,7 @@ import Spell from "./Components/Spell";
 import Header from "./Components/Header";
 import User from "./Components/User";
 import Home from "./Components/Home";
-import Login from "./Components/Login";
+import Login from "./Components/SignIn";
 import {
   BrowserRouter as Router,
   Route,

@@ -17,6 +17,6 @@ namespace WizardSpellsAPI.Models
         public List<UserComment> Comments { get; set; }
     }
 
-
+    // one user has many projects 
 }
 
